@@ -1,7 +1,7 @@
 class SynchronousCardLoaderPawn {
     setup() {
         this.subscribe(this.sessionId, "synchronousLoadCardsStarted", "synchronousLoadCardsStarted");
-        this.subscribe(this.sessionId, "allSynnchronousCardsLoaded", "allSynnchronousCardsLoaded");
+        this.subscribe(this.sessionId, "allSynchronousCardsLoaded", "allSynchronousCardsLoaded");
 
         let viewRoot = Microverse.getViewRoot();
         if (viewRoot.notLoadedSynchronousCards) {
@@ -9,7 +9,7 @@ class SynchronousCardLoaderPawn {
         }
 
         this.coverInPlace = true;
-        this.future(30000).allSynnchronousCardsLoaded();
+        this.future(10000).allSynchronousCardsLoaded();
     }
 
     synchronousLoadCardsStarted() {
@@ -25,15 +25,25 @@ class SynchronousCardLoaderPawn {
         window.initialCoverDiv = initialCoverDiv;
         document.body.appendChild(initialCoverDiv);
 
-        this.spinner = document.createElement("div");
+        this.spinner = document.createElement("video");
         this.spinner.id = "croquet_loader";
-        this.spinner.innerText = "Catching up...";
+        // this.spinner.innerText = "Catching up...";
+        this.spinner.setAttribute('autoplay', 'true');
+        this.spinner.style.width="100%"
+        this.spinner.style.height="100%";
+        this.spinner.style.backgroundColor = "#000000";
+        this.video = document.createElement("source");
+        this.video.setAttribute('src', 'https://matt.engagelively.com/assets/kaleidoscope-art-17141.mp4');
+        this.video.setAttribute('type', 'video/mp4');
+        this.video.id = "loader_video";
+        this.spinner.appendChild(this.video);
 
         initialCoverDiv.appendChild(this.spinner);
+        this.spinner.play().then(_ => 'video play started').catch(_ => 'Error playing video')
         Microverse.sendToShell("hud", {joystick: false, fullscreen: false});
     }
 
-    allSynnchronousCardsLoaded() {
+    allSynchronousCardsLoaded() {
         if (!this.coverInPlace) {
             return;
         }

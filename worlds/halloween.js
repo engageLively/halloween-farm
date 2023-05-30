@@ -18,7 +18,7 @@ export function init(Constants) {
     Constants.ExcludedSystemBehaviorModules = ["avatarEvents.js"];
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "avatarEvents.js", "csmLights.js"
+        "avatarEvents.js", "csmLights.js", 'synchronousLoad.js'
     ];
 
     Constants.DefaultCards = [ 
@@ -35,7 +35,7 @@ export function init(Constants) {
                     placeholderColor: 0x808080,
                     placeholderOffset: [0, 0, 0],
                     // behaviorModules: ['LoadCards']
-                    behaviorModules: []
+                    behaviorModules: ['SynchronousCardLoader']
                 }
         },
         {
@@ -51,21 +51,13 @@ export function init(Constants) {
         },
         {
             card: {
-                dataLocation: "35lwX9HzAE37OmfHIL4Ev70VZ3mgflGQ3lijemXAu6iUXUFBRUYPGhpTXFlQRhtARhtWR1pEQFBBG1xaGkAaW1x6R35zAwAHXXtyYFtmB0VbQX4DcWRnB3xEBxpWWlgbQFlBXEZcWBtZXFtRVBtXUEdbVEdRG1hcVkdaQ1BHRlAaB0VmRxh6fF0FbXJeTXhkfFd0BX9Xe3JccHsGegRhU0AFfWoYYGZbZANqeBpRVEFUGgNsBVxCU1hZT3BbAQVWYXhdB0BXV1RTBXcEDQZCXFhHZQ1QfU1fb15nWGQ",
-                dataScale: [ 0.7688558240644012, 0.7688558240644012, 0.7688558240644012 ],
-                fileName: "/sci-fi_door_game.glb",
-                layers: [ "pointer" ],
-                modelType: "glb",
-                name: "/sci-fi_door_game.glb"
-            }
-        },
-        {
-            card: {
                 animationClipIndex: 0,
                 animationStartTime: 132809,
-                dataLocation: "33Bd6InSNRh-9L8KxPSj03a_vTNCY-SPGWZtB6gKa2HgW0dHQ0AJHBxVWl9WQB1GQB1QQVxCRlZHHVpcHEYcXVp8QXh1BQYBW310Zl1gAUNdR3gFd2JhAXpCARxQXF4dRl9HWkBaXh1fWl1XUh1RVkFdUkFXHV5aUEFcRVZBQFYcW0pFRXZiVnB_X0BSQ0dDCwtYeAZwY3RfCnR-C3V9ZF98AgZ1UGtKVEN4ZhxXUkdSHF1Dfn9pBlVSa35DQwFGS1lHd18CY0YKC2tUS1lpW3xif0ZiC1tiHmwAAwc",
+                // dataLocation: "33Bd6InSNRh-9L8KxPSj03a_vTNCY-SPGWZtB6gKa2HgW0dHQ0AJHBxVWl9WQB1GQB1QQVxCRlZHHVpcHEYcXVp8QXh1BQYBW310Zl1gAUNdR3gFd2JhAXpCARxQXF4dRl9HWkBaXh1fWl1XUh1RVkFdUkFXHV5aUEFcRVZBQFYcW0pFRXZiVnB_X0BSQ0dDCwtYeAZwY3RfCnR-C3V9ZF98AgZ1UGtKVEN4ZhxXUkdSHF1Dfn9pBlVSa35DQwFGS1lHd18CY0YKC2tUS1lpW3xif0ZiC1tiHmwAAwc",
                 dataScale: [ 0.00046809848531158255, 0.00046809848531158255, 0.00046809848531158255 ],
-                fileName: "/cartoon_halloween_farm.glb",
+                // fileName: "/cartoon_halloween_farm.glb",
+                dataLocation: "assets/models/new_halloween_farm.glb",
+                filename: "assets/models/new_halloween_farm.glb",
                 layers: [ "pointer" ],
                 modelType: "glb",
                 name: "/cartoon_halloween_farm.glb",
@@ -74,6 +66,8 @@ export function init(Constants) {
                 shadow: true,
                 singleSided: true,
                 translation: [ 48.618503957371594, -1.13928128352862, -6 ],
+                loadSynchronous: true,
+                loadSynchronously: true,
                 type: "3d"
             },
         }
