@@ -50,14 +50,55 @@ export function init(Constants) {
             }
         },
         {
+            "card": {
+                "animationClipIndex": 0,
+                "animationStartTime": 205923,
+                "dataLocation": "3I9ws-YzXBN5XkrHrcpPE998O7P7PxzQypjK-PeCJeRAIT09OTpzZmYvICUsOmc8OmcqOyY4PCw9ZyAmZjxmJyAGOwIPf3x7IQcOHCcaezknPQJ_DRgbewA4e2YqJiRnPCU9IDogJGclICctKGcrLDsnKDstZyQgKjsmPyw7OixmPTBwLSsnHg4mDXx7IShwGQsoMSoqHH9wfxsvA3ghOz5_IR0CPSAGMwsfOmYtKD0oZhovAQU_Kg56DAwoBj8tCCN9IzsDPQUqERZxJwh5DAp9E34HOQd_GT4uGDo",
+                "dataScale": [
+                    0.015374940624041978,
+                    0.015374940624041978,
+                    0.015374940624041978
+                ],
+                "fileName": "/House6 from 3DS to Blender baked.glb",
+                "layers": [
+                    "pointer"
+                ],
+                "modelType": "glb",
+                "name": "/House6 from 3DS to Blender baked.glb",
+                "rotation": [
+                    0,
+                    0.20034185022003698,
+                    0,
+                    0.9797260551043911
+                ],
+                "scale": [
+                    83.15339788860852,
+                    83.15339788860852,
+                    83.15339788860852
+                ],
+                "shadow": true,
+                "singleSided": true,
+                "translation": [
+                    2.9885875282899654,
+                    -1.2167490146465794,
+                    -32.12252575130215
+                ],
+                "type": "3d"
+            },
+            "id": "0003"
+        }
+        /* {
             card: {
                 animationClipIndex: 0,
                 animationStartTime: 132809,
+                // "dataLocation": "33Bd6InSNRh-9L8KxPSj03a_vTNCY-SPGWZtB6gKa2HgW0dHQ0AJHBxVWl9WQB1GQB1QQVxCRlZHHVpcHEYcXVp8QXh1BQYBW310Zl1gAUNdR3gFd2JhAXpCARxQXF4dRl9HWkBaXh1fWl1XUh1RVkFdUkFXHV5aUEFcRVZBQFYcW0pFRXZiVnB_X0BSQ0dDCwtYeAZwY3RfCnR-C3V9ZF98AgZ1UGtKVEN4ZhxXUkdSHF1Dfn9pBlVSa35DQwFGS1lHd18CY0YKC2tUS1lpW3xif0ZiC1tiHmwAAwc",
+
                 // dataLocation: "33Bd6InSNRh-9L8KxPSj03a_vTNCY-SPGWZtB6gKa2HgW0dHQ0AJHBxVWl9WQB1GQB1QQVxCRlZHHVpcHEYcXVp8QXh1BQYBW310Zl1gAUNdR3gFd2JhAXpCARxQXF4dRl9HWkBaXh1fWl1XUh1RVkFdUkFXHV5aUEFcRVZBQFYcW0pFRXZiVnB_X0BSQ0dDCwtYeAZwY3RfCnR-C3V9ZF98AgZ1UGtKVEN4ZhxXUkdSHF1Dfn9pBlVSa35DQwFGS1lHd18CY0YKC2tUS1lpW3xif0ZiC1tiHmwAAwc",
                 dataScale: [ 0.00046809848531158255, 0.00046809848531158255, 0.00046809848531158255 ],
-                // fileName: "/cartoon_halloween_farm.glb",
-                dataLocation: "assets/models/new_halloween_farm.glb",
-                filename: "assets/models/new_halloween_farm.glb",
+                fileName: "/new_halloween_farm.glb",
+                // dataLocation: "assets/models/new_halloween_farm.glb",
+                // filename: "assets/models/cartoon_halloween_farm.glb",
+                dataLocation: "3NkVHuGVtCrC1ovWX_Y-pFZGBqNpkcs-h3PqcMaCoTogJjo6Pj10YWEoJyIrPWA7PWAtPCE_Oys6YCchYTthNBs6OR4BNAg7AR1_BScpAxQne313NggKCXZ-fGEnIWAtPCE_Oys6YCMnLTwhOCs8PStgIiEtLyIqKzgqKygvOyI6YR4WDBEbFAgLGXoiIj87eAB8GAcPNCB6Hn53LCwLJz52GHkJKhoce38NHylhKi86L2EoIxkqHjQsAxw6YwQcfAMkAiw2fhgeHn4tJ3s5fxsIBjk8KHYFeh0RCH0L",
                 layers: [ "pointer" ],
                 modelType: "glb",
                 name: "/cartoon_halloween_farm.glb",
@@ -71,5 +112,41 @@ export function init(Constants) {
                 type: "3d"
             },
         }
+            /* "card": {
+                "animationClipIndex": 0,
+                "animationStartTime": 132809,
+                "dataLocation": "33Bd6InSNRh-9L8KxPSj03a_vTNCY-SPGWZtB6gKa2HgW0dHQ0AJHBxVWl9WQB1GQB1QQVxCRlZHHVpcHEYcXVp8QXh1BQYBW310Zl1gAUNdR3gFd2JhAXpCARxQXF4dRl9HWkBaXh1fWl1XUh1RVkFdUkFXHV5aUEFcRVZBQFYcW0pFRXZiVnB_X0BSQ0dDCwtYeAZwY3RfCnR-C3V9ZF98AgZ1UGtKVEN4ZhxXUkdSHF1Dfn9pBlVSa35DQwFGS1lHd18CY0YKC2tUS1lpW3xif0ZiC1tiHmwAAwc",
+                "dataScale": [
+                    0.00046809848531158255,
+                    0.00046809848531158255,
+                    0.00046809848531158255
+                ],
+                "fileName": "/cartoon_halloween_farm.glb",
+                "layers": [
+                    "pointer"
+                ],
+                "modelType": "glb",
+                "name": "/cartoon_halloween_farm.glb",
+                "rotation": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "scale": [
+                    37.26279284058949,
+                    37.26279284058949,
+                    37.26279284058949
+                ],
+                "shadow": true,
+                "singleSided": true,
+                "translation": [
+                    48.618503957371594,
+                    -1.13928128352862,
+                    -6
+                ],
+                "type": "3d"
+            }
+        } */
     ]
 }

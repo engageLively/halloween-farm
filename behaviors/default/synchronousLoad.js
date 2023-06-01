@@ -9,7 +9,7 @@ class SynchronousCardLoaderPawn {
         }
 
         this.coverInPlace = true;
-        this.future(10000).allSynchronousCardsLoaded();
+        this.future(5000).allSynchronousCardsLoaded();
     }
 
     synchronousLoadCardsStarted() {
