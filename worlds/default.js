@@ -88,6 +88,39 @@ export function init(Constants) {
             "id": "0003"
         }
         /* {
+            "card": {
+                "animationClipIndex": 0,
+                "animationStartTime": 11755,
+                "dataLocation": "3wXoR-CtxVcsQ7RU3am0aEvQ0l_AQMzRPQUnPWIWLy58HwMDBwRNWFgRHhsSBFkCBFkUBRgGAhIDWR4YWAJYGR44BTwxQUJFHzkwIhkkRQcZAzxBMyYlRT4GRVgUGBpZAhsDHgQeGlkbHhkTFlkVEgUZFgUTWRoeFAUYARIFBBJYHTJAPzA-RREjQgc5ERg8HAUhJUFHRg9AHDUgBjEcBg8lRwMSGgUYRThHBFgTFgMWWCg-AT0RGQRAG0A6Hh4OOSJHGkQODxADA1paTyg6OjhBIEMeFB4cMEMtGQQ",
+                "dataScale": [
+                    0.00046809848531158255,
+                    0.00046809848531158255,
+                    0.00046809848531158255
+                ],
+                "fileName": "/cartoon_halloween_farm (1).glb",
+                "layers": [
+                    "pointer"
+                ],
+                "modelType": "glb",
+                "name": "/cartoon_halloween_farm (1).glb",
+                "rotation": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "shadow": true,
+                "singleSided": true,
+                "translation": [
+                    0,
+                    0,
+                    -6
+                ],
+                "type": "3d"
+            },
+            "id": "0004"
+        } */
+        /* {
             card: {
                 animationClipIndex: 0,
                 animationStartTime: 132809,
