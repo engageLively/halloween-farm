@@ -52,8 +52,8 @@ export function init(Constants) {
         {
             card:{
                 name: "canvas",
-                translation: [30, -0.318, -30],
-                rotation: [0, 0, 0],
+                translation: [-34.11056593098867, -0.011999999254941773, -31.647787903161397],
+                rotation: [-0.006543320282162596, 0.7856561615728791, -0.00515205777161674, -0.6186073367193223],
                 scale: [3, 3, 3],
                 type: "2d",
                 textureType: "canvas",
