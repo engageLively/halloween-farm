@@ -18,7 +18,7 @@ export function init(Constants) {
     Constants.ExcludedSystemBehaviorModules = ["avatarEvents.js"];
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "avatarEvents.js", "csmLights.js", 'synchronousLoad.js'
+        "avatarEvents.js", "canvasPawn.js", "csmLights.js", 'jumpWorld.js', 'synchronousLoad.js'
     ];
 
     Constants.DefaultCards = [ 
@@ -47,6 +47,28 @@ export function init(Constants) {
                 layers: [ "light" ],
                 name: "light",
                 type: "lighting"
+            }
+        },
+        {
+            card:{
+                name: "canvas",
+                translation: [30, -0.318, -30],
+                rotation: [0, 0, 0],
+                scale: [3, 3, 3],
+                type: "2d",
+                textureType: "canvas",
+                textureWidth: 1024,
+                textureHeight: 768,
+                width: 1,
+                height: 0.75,
+                // color: 0xffffff,
+                depth: 0.05,
+                cornerRadius: 0.1,
+                jumpCheckInterval: 50,
+                    jumpDistance: 1,
+                    translationAfterJump: [-49, -0.01, 123.46],
+                    targetURL: "https://engagelively.github.io/bay-portal-3D",
+                behaviorModules: ["CanvasPawn", "JumpWorld"]
             }
         },
         {

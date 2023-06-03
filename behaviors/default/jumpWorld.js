@@ -7,6 +7,7 @@ class JumpWorldActor {
         console.log('Setup for JumpWorldActor called')
         this.future(1000).step();
         this.lastPosition = undefined;
+        this.jumpedAvatars = [];
     }
 
 
@@ -37,12 +38,16 @@ class JumpWorldActor {
         const avatars = this._avatars();
         // this._showPositions();
         const jumpAvatars = avatars.filter(avatar => this._distanceSquare(avatar) <= this._cardData.jumpDistance);
-        if (jumpAvatars.length > 0) {
+        const avatarsToJump = jumpAvatars.filter(avatar => this.jumpedAvatars.indexOf(avatar) < 0);
+        
+        if (avatarsToJump.length > 0) {
             
-            jumpAvatars.forEach(avatar => this.publish('global', 'jumpToTargetWorld', {viewId: avatar.playerId, targetURL: this._cardData.targetURL}));
+            avatarsToJump.forEach(avatar => this.publish('global', 'jumpToTargetWorld', {viewId: avatar.playerId, targetURL: this._cardData.targetURL}));
+            this.jumpedAvatars = jumpAvatars;
         } else {
-            this.future(this._cardData.jumpCheckInterval).step()
+            this.jumpedAvatars = [];
         }
+        this.future(this._cardData.jumpCheckInterval).step()
         
     }
 
