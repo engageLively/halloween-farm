@@ -12,6 +12,7 @@ class SynchronousCardLoaderPawn {
         this.future(5000).allSynchronousCardsLoaded();
     }
 
+    
     synchronousLoadCardsStarted() {
         console.log("synchronousLoadCardsStarted");
         let initialCoverDiv = document.createElement("div");
@@ -24,8 +25,15 @@ class SynchronousCardLoaderPawn {
         initialCoverDiv.style.opacity = "0.95";
         window.initialCoverDiv = initialCoverDiv;
         document.body.appendChild(initialCoverDiv);
+        this.canvas = document.createElement('canvas');
+        this.canvas.style.width="100%"
+        this.canvas.style.height="100%";
+        this.canvas.style.backgroundColor = "#000000";
+        initialCoverDiv.appendChild(this.canvas)
+        this.angle = 0;
+        this.future(20).canvasStep()
 
-        this.spinner = document.createElement("video");
+       /*  this.spinner = document.createElement("video");
         this.spinner.id = "croquet_loader";
         // this.spinner.innerText = "Catching up...";
         this.spinner.setAttribute('autoplay', 'true');
@@ -39,7 +47,7 @@ class SynchronousCardLoaderPawn {
         this.spinner.appendChild(this.video);
 
         initialCoverDiv.appendChild(this.spinner);
-        this.spinner.play().then(_ => 'video play started').catch(_ => 'Error playing video')
+        this.spinner.play().then(_ => 'video play started').catch(_ => 'Error playing video') */
         Microverse.sendToShell("hud", {joystick: false, fullscreen: false});
     }
 
@@ -73,6 +81,36 @@ class SynchronousCardLoaderPawn {
             });
         };
         setButtons("flex");
+    }
+    _drawSpiral(angle) {
+        const colors = ['red', 'green', 'blue'];
+        let ctx = this.canvas.getContext("2d");
+        ctx.fillStyle = 'black';
+        ctx.fillRect( 0, 0, this.canvas.width, this.canvas.height );
+        for (let i = 0; i < 5* this.canvas.height; i++) {
+            const color = colors[i % colors.length];
+            const theta = 0.1 * i + angle;
+            const r = 0.1 * i;
+            let x = r * Math.cos(theta) + this.canvas.width/2;
+            let y = r  * Math.sin(theta) + this.canvas.height/2;
+            ctx.beginPath();
+            ctx.moveTo(x + 1, y);
+            ctx.arc(x, y, 1, 0, 2 * Math.PI);
+            ctx.fillStyle = ctx.strokeStyle = color;
+            ctx.stroke();
+            ctx.fill();
+            ctx.closePath();
+            
+        }
+
+    }
+
+    canvasStep() {
+        if (this.canvas) {
+            this._drawSpiral(this.angle)
+            this.angle += 0.1; // rad, about 5 degrees
+            this.future(20).canvasStep();
+        }
     }
 }
 
